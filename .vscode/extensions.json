@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-typescript-next",
+    "formulahendry.auto-rename-tag",
+    "zignd.html-css-class-completion",
+    "cpylua.language-postcss",
+    "yzhang.markdown-all-in-one",
+    "bradlc.vscode-tailwindcss",
+    "pmneo.tsimporter",
+    "vscode-icons-team.vscode-icons",
+    "yoavbls.pretty-ts-errors"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "package.json": ".eslintignore, .eslintrc.cjs, .prettierignore, .prettierrc, storefrontapi.generated.d.ts, .eslintrc.js, .graphqlrc.yml, remix.config.js, remix.env.d.ts, .env.me, .env.vault, next.config.js, .eslintrc.json, .prettierrc.json, prettier.config.cjs, postcss.config.js, tailwind.config.js, .gitattributes, vite.config.js, components.json, postcss.config.cjs, prettier.config.mjs, tailwind.config.ts, tsconfig.json, .env, .env.example, .gitignore, .typesafe-i18n.json, next-env.d.ts, next.config.mjs, package-lock.json, yarn.lock, pnpm-lock.yaml, jsconfig.json"
+  },
+  "files.exclude": {
+    "**/.vscode": true,
+  },
+  "explorer.excludeGitIgnore": true,
+  "css.lint.unknownAtRules": "ignore",
+  "explorer.sortOrder": "filesFirst"
+}
