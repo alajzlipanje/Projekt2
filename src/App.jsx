@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 export default function App() {
   const [quotes, setQuotes] = useState([]);
   const [tags, setTags] = useState(["tag1", "tag2", "tag3", "tag4"]);
+  const [selectedTag, setselectedTag] = useState(null);
 
   async function getQuotes() {
     const request = await fetch("quotes.json");
@@ -19,7 +20,22 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    console.log(quotes);
+    // preverimo ce quotes obstaja in ima element
+    if (!(quotes && quotes.length > 0)) {
+      return;
+    }
+
+    let tags = [];
+
+    quotes.forEach((e) => {
+      e["tags"].forEach((i) => {
+        if (tags.includes(i)) {
+        } else {
+          tags.push(i);
+        }
+      });
+    });
+    setTags(tags);
   }, [quotes]);
 
   return (
@@ -27,12 +43,14 @@ export default function App() {
       <div>
         <div>
           {tags.map((tag) => (
-            <Badge></Badge>
+            <Badge className="grid grid-cols-8" key={tag}>
+              {tag}
+            </Badge>
           ))}
         </div>
         <ul className="grid grid-cols-4 ">
           {quotes.map((quote) => (
-            <Quote data={quote}></Quote>
+            <Quote data={quote} key={quote["_id"]}></Quote>
           ))}
         </ul>
       </div>
